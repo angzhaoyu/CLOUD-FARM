@@ -1,7 +1,9 @@
 // ============================================================
 // 文件：scripts/social/RankingPanel.ts
-// 职责：排行榜面板——支持 harvest / level / steal 三种排行
-// 维护人：B
+// 说明：排行榜面板，支持 harvest/level/steal 三种排行
+// 负责人：B
+// 调用方：SocialManager.showRanking() 触发显示
+// 调用CloudAPI：CloudAPI.getRanking()
 // ============================================================
 
 import {

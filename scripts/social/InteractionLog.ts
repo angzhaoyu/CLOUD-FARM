@@ -1,7 +1,10 @@
 // ============================================================
 // 文件：scripts/social/InteractionLog.ts
-// 职责：展示互动记录——谁偷了你的菜、谁帮你浇了水等
-// 维护人：B
+// 说明：互动记录面板，展示被偷/被浇水等记录
+// 负责人：B
+// 调用方：SocialManager.showInteractionLog() 触发显示
+// 发出事件：ENTER_FRIEND_FARM（点击某条记录跳转到该好友农场）
+// 调用CloudAPI：CloudAPI.getInteractions()
 // ============================================================
 
 import {

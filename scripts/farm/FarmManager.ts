@@ -1,8 +1,13 @@
 // ============================================================
 // 文件：scripts/farm/FarmManager.ts
-// 职责：Farm.scene 的主控制器，管理所有地块
-// 挂载：Farm.scene 根节点
-// 维护人：A
+// 说明：农场主管理器，管理所有地块、作物生长刷新、场景初始化
+// 负责人：A
+// 调用方：Farm.scene 根节点挂载，游戏启动后自动运行
+// 监听事件：
+//   - GAME_DATA_READY → 初始化农场地块
+//   - SEED_SELECTED → 执行种植
+//   - LEAVE_FRIEND_FARM → 从好友农场返回时刷新
+// 发出事件：CROP_MATURED, CROP_WITHERED, BUG_APPEARED
 // ============================================================
 
 import { _decorator, Component, Node, Prefab, instantiate } from 'cc'

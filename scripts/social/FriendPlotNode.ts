@@ -1,11 +1,14 @@
 // ============================================================
 // 文件：scripts/social/FriendPlotNode.ts
-// 职责：好友农场中单个地块的显示和交互
-//       与 A 的 PlotNode 类似，但操作不同：
-//         - 成熟作物 → 偷菜
-//         - 缺水作物 → 帮浇水
-//         - 有虫     → 帮除虫
-// 维护人：B
+// 说明：好友农场中单个地块的显示和交互（偷菜/帮浇水/帮除虫）
+// 负责人：B
+// 调用方：FriendFarmScene 创建地块时挂载
+// 发出事件：
+//   - STEAL_SUCCESS → 偷菜成功（C 弹提示）
+//   - STEAL_FAILED → 偷菜失败（C 弹提示）
+//   - FRIEND_WATERED → 帮浇水完成（C 弹提示）
+// 调用CloudAPI：CloudAPI.steal(), CloudAPI.waterFriend()
+// 引用A的文件：import { CropGrowth } from '../farm/CropGrowth'（复用生长计算）
 // ============================================================
 
 import {

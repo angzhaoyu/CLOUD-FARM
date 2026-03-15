@@ -1,9 +1,10 @@
 // ============================================================
 // 文件：scripts/social/FriendFarmScene.ts
-// 职责：好友农场场景的控制器
-//       加载并展示好友的农场地块，提供偷菜 / 帮浇水等入口
-// 挂载：Farm.scene 中覆盖层节点 FriendFarmRoot
-// 维护人：B
+// 说明：好友农场场景控制器，加载并展示好友的农场地块
+// 负责人：B
+// 调用方：SocialManager.onEnterFriendFarm() 触发
+// 发出事件：LEAVE_FRIEND_FARM（点击返回按钮时）
+// 调用CloudAPI：CloudAPI.getFriendFarm()
 // ============================================================
 
 import { _decorator, Component, Node, Label, Prefab, instantiate, Vec3 } from 'cc'

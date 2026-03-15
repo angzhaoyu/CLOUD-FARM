@@ -1,9 +1,10 @@
 // ============================================================
 // 文件：scripts/social/StealAction.ts
-// 职责：封装偷菜的业务逻辑——冷却判断、次数限制、调用 CloudAPI、
-//       发出成功/失败事件
-// 维护人：B
-// 说明：不挂载到节点上，作为纯逻辑类由 FriendPlotNode 实例化使用
+// 说明：偷菜业务逻辑封装（冷却判断、次数限制、调用CloudAPI、发出事件）
+// 负责人：B
+// 调用方：FriendPlotNode 内部实例化使用
+// 发出事件：STEAL_SUCCESS, STEAL_FAILED
+// 调用CloudAPI：CloudAPI.steal()
 // ============================================================
 
 import { CloudAPI } from '../shared/CloudAPI'
